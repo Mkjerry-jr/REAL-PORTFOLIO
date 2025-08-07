@@ -113,9 +113,9 @@ const About = () => {
         I’m a passionate and dedicated fresher with a strong interest in
         technology and development. I’m eager to explore real-world
         opportunities, learn new skills, and contribute meaningfully to
-        innovative projects. With a curious mindset and a willingness to grow,
-        I’m excited to begin my journey in the tech industry. <br />
-        Let's work together to bring your ideas to life!
+        innovative projects. With a curious mindset and a   <br />willingness to grow,
+        I’m excited to begin my journey in the tech industry. Let's <br />work together to bring your ideas to life!
+        <br /><br />I am also focusing on these apart from FrontEnd.
       </p>
 
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-10">
