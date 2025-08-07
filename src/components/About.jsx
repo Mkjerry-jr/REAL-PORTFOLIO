@@ -1,284 +1,130 @@
-import {
-  logo,
-  github,
-  menu,
-  close,
-  css,
-  mysql,
-  express,
-  aws,
-  mui,
-  gsap,
-  framer,
-  figma,
-  git,
-  html,
-  javascript,
-  mongodb,
-  nodejs,
-  reactjs,
-  redux,
-  tailwind,
-  threejs,
-  firstTestimonial,
-  secondTestimonial,
-  thirdTestimonial,
-} from '../assets';
+import React, { useRef, useEffect } from "react";
+import { Tilt } from "react-tilt";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Company logos
-import tcs from "../assets/company/tcs.png";
-import EduVision from "../assets/company/EduVision.png";
-import chatbot from "../assets/company/chatbot.png";
-import VHP from "../assets/company/VHP.png";
+import { styles } from "../styles";
+import { SectionWrapper } from "../hoc";
 
-// ✅ New icons for services
-import mernIcon from '../assets/mern.png';
-import genAiIcon from '../assets/GenAi.png';
-import promptIcon from '../assets/prompt.png';
-import daIcon from '../assets/DA.png';
+// ✅ Updated icons
+import mernIcon from "../assets/1.png";
+import genAiIcon from "../assets/2.png";
+import promptIcon from "../assets/3.png";
+import daIcon from "../assets/4.png";
 
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
-];
-
-<<<<<<< HEAD
+// ✅ Services array updated with correct icons
 const services = [
-  {
-    title: "MERN Developer",
-    icon: mernIcon,
-  },
-  {
-    title: "GenAI Enthusiast",
-    icon: genAiIcon,
-  },
-  {
-    title: "Prompt Engineer",
-    icon: promptIcon,
-  },
-  {
-    title: "Data Analyst",
-    icon: daIcon,
-  },
+  { title: "MERN Developer", icon: mernIcon },
+  { title: "GenAI Enthusiast", icon: genAiIcon },
+  { title: "Prompt Engineer", icon: promptIcon },
+  { title: "Data Analyst", icon: daIcon },
 ];
 
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "gsap",
-    icon: gsap,
-  },
-  {
-    name: "framer",
-    icon: framer,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Material Ui",
-    icon: mui,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "Express Js",
-    icon: express,
-  },
-  {
-    name: "AWS",
-    icon: aws,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "MySql",
-    icon: mysql,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-];
-=======
+gsap.registerPlugin(ScrollTrigger);
+
+const useGsap = (elementRef, animation, delay = 0) => {
+  useEffect(() => {
+    if (elementRef.current) {
+      gsap.fromTo(
+        elementRef.current,
+        animation.from,
+        {
+          ...animation.to,
+          delay,
+          scrollTrigger: {
+            trigger: elementRef.current,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }
+  }, [elementRef, animation, delay]);
+};
+
 const ServiceCard = ({ index, title, icon }) => {
   const cardRef = useRef(null);
 
-  useGsap(cardRef, {
-    from: { opacity: 0, y: 100, scale: 0.8 },
-    to: { opacity: 1, y: 0, scale: 1, duration: 1, ease: "power3.out" },
-  }, index * 0.2);
+  useGsap(
+    cardRef,
+    {
+      from: { opacity: 0, y: 100, scale: 0.8 },
+      to: { opacity: 1, y: 0, scale: 1, duration: 1, ease: "power3.out" },
+    },
+    index * 0.2
+  );
 
-  // ✅ Conditionally enlarge icons for specific titles
+  // ✅ Enlarge icons for GenAI and Data Analyst
   const isLargeIcon = title === "GenAI Enthusiast" || title === "Data Analyst";
   const iconSize = isLargeIcon ? "w-24 h-24" : "w-16 h-16";
 
   return (
     <Tilt className="xs:w-[250px] w-full">
-      <div ref={cardRef} className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+      <div
+        ref={cardRef}
+        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      >
         <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-          <img src={icon} alt={title} className={`${iconSize} object-contain`} />
-          <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+          <img
+            src={icon}
+            alt={title}
+            className={`${iconSize} object-contain`}
+          />
+          <h3 className="text-white text-[20px] font-bold text-center">
+            {title}
+          </h3>
         </div>
       </div>
     </Tilt>
   );
 };
->>>>>>> 4d17df8 (Add full project with updated About.jsx and enhanced service icons)
 
-const experiences = [
-  {
-    title: "Graduate Trainee",
-    company_name: "Tata Consultancy Services",
-    icon: tcs,
-    iconBg: "#383E56",
-    date: "Jun 2025 - present",
-    points: [
-      "Supporting software development and maintenance tasks under the guidance of senior team members.",
-      "Learning and working with technologies like Java, SQL, HTML, and other project-specific tools.",
-      "Assisting in testing, debugging, and documenting software applications across various domains",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
+const About = () => {
+  const headingRef = useRef(null);
+  const paragraphRef = useRef(null);
 
-const testimonials = [
-  {
-    testimonial:
-      "A highly focused and curious learner, Manoj stood out for his commitment to excellence and ability to work collaboratively on team projects with his excellent leadership.",
-    name: "Dr. Renuka Devi M",
-    designation: "Professor",
-    company: "Presidency University",
-    image: secondTestimonial,
-  },
-  {
-    testimonial:
-      "Manoj actively contributed to student coordination activities and consistently demonstrated excellent time management skills. His timely support made a positive impact.",
-    name: "Dr. Anand Kumar M",
-    designation: "Professor",
-    company: "Presidency University",
-    image: thirdTestimonial,
-  },
-  {
-    testimonial:
-      "I have seen Manoj take initiative in multiple technical events and class discussions. His blend of curiosity and responsibility is exactly what the industry looks for in fresh graduates.",
-    name: "Dr. Mahalakshmi R",
-    designation: "Associate Dean",
-    company: "Presidency University",
-    image: firstTestimonial,
-  },
-];
+  // Heading Animation
+  useGsap(headingRef, {
+    from: { opacity: 0, x: -50 },
+    to: { opacity: 1, x: 0, duration: 1, ease: "power2.out" },
+  });
 
-const projects = [
-  {
-    name: "Virtual Hand Painter",
-    description:
-      "Virtual Hand Painter is a feature used in online meetings to represent visuals without the need for any hardware assistance. It uses our camera to track hands for drawing which reduces the reliance on text and promotes visual interaction by enabling on-screen drawing.",
-    tags: [
-      {
-        name: "Python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Flask",
-        color: "white-text-gradient",
-      },
-      {
-        name: "OpenCV",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: VHP,
-    source_code_link: "https://github.com/Mkjerry-jr/virtual-painter-web",
-  },
-  {
-    name: "Simple Chatbot",
-    description:
-      "This is a simple Q/A chatbot designed to answer a predefined set of questions.It works on a conversational model, interpreting short user inputs effectively.The bot provides accurate responses based on the detected query. Mostly used in Customer Support and Tech Assistance fields.",
-    tags: [
-      {
-        name: "Python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "HTML-CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JS",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: chatbot,
-    source_code_link: "https://github.com/Mkjerry-jr/Chatbot",
-  },
-  {
-    name: "EduVision",
-    description:
-      "EduVision is a mini-ERP for government primary schools, managing attendance, marks, and student data. It supports role-based access for Teachers, Heads, Cluster Heads, and BEOs. Built with the MEEN stack, it enables easy supervision and centralized monitoring.",
-    tags: [
-      {
-        name: "Node",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Express",
-        color: "white-text-gradient",
-      },
-      {
-        name: "Ember",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MongoDB",
-        color: "green-text-gradient",
-      },
-    ],
-    image: EduVision,
-    source_code_link: "https://github.com/Mkjerry-jr/EduVision",
-  },
-];
+  // Paragraph Animation
+  useGsap(
+    paragraphRef,
+    {
+      from: { opacity: 0, y: 50 },
+      to: { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" },
+    },
+    0.3
+  );
 
-export { services, technologies, experiences, testimonials, projects };
+  return (
+    <>
+      <div ref={headingRef}>
+        <p className={styles.sectionSubText}>Introduction</p>
+        <h2 className={styles.sectionHeadText}>Overview.</h2>
+      </div>
+
+      <p
+        ref={paragraphRef}
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+      >
+        I’m a passionate and dedicated fresher with a strong interest in
+        technology and development. I’m eager to explore real-world
+        opportunities, learn new skills, and contribute meaningfully to
+        innovative projects. With a curious mindset and a willingness to grow,
+        I’m excited to begin my journey in the tech industry. <br />
+        Let's work together to bring your ideas to life!
+      </p>
+
+      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-10">
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default SectionWrapper(About, "about");
