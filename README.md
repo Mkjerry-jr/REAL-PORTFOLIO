@@ -5,21 +5,17 @@ This site was crafted with passion using **React**, showcasing my projects, skil
 
 ## 🌐 Live Preview
 
-🔗 [Visit My Portfolio](https://your-username.github.io/your-repo-name)  
-*(Replace with your actual live link)*
+🔗 [Visit My Portfolio](https://mkjerry.netlify.app/)  
 
 ---
 
 ## ✨ Features
 
 - 🌙 **Dark Mode** UI with sleek sky blue highlights
-- 🎥 Background video + animated typing effect
-- 📂 **Projects Carousel** with clickable previews
-- 🧠 **Domains Known** – neatly arranged in a 3x3 grid
 - 💬 **Testimonials** section
 - 📄 One-click **Resume Download** button
 - 📱 Fully **Responsive Design** (Mobile + Desktop)
-- 📬 Contact form with email integration
+
 
 ---
 
@@ -29,30 +25,21 @@ This site was crafted with passion using **React**, showcasing my projects, skil
 |--------------|-----------------------------|
 | **React**    | Core frontend framework     |
 | **HTML5**    | Structure of the website    |
-| **CSS3**     | Custom styling              |
+| **Tailwind CSS**     | Custom styling              |
 | **JavaScript** | Frontend logic & interactivity |
+| **Vite.Js**     | fast development server             |
 | **Framer Motion** | Animations              |
-| **EmailJS** *(if used)* | Email functionality |
-| **GitHub Pages** | Deployment               |
+| **Netlify** | Deployment               |
 
 ---
 
-## 📸 Screenshots
 
-> *Add images here to showcase sections like home, projects, contact, etc.*
-
-| Home Page | Projects | Contact |
-|-----------|----------|---------|
-| ![Home](assets/home.png) | ![Projects](assets/projects.png) | ![Contact](assets/contact.png) |
-
----
 
 ## 📁 Getting Started
 
 Clone the repo and run locally:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Mkjerry-jr/REAL-PORTFOLIO.git
 npm install
 npm start
