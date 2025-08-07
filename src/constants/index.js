@@ -74,16 +74,13 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Graduate Trainee",
+    title: "Graduate Trainee (Not Onboarded Yet)",
     company_name: "Tata Consultancy Services",
     icon: tcs,
     iconBg: "#383E56",
     date: "Jun 2025 - present",
     points: [
-      "Supporting software development and maintenance tasks under the guidance of senior team members.",
-      "Learning and working with technologies like Java, SQL, HTML, and other project-specific tools.",
-      "Assisting in testing, debugging, and documenting software applications across various domains",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Recently received Offer letter from TCS and waiting for Onboarding, it usually takes minimum 6 months to 1 year for Onboarding. So until that period of time I am unemployed!!!",
     ],
   },
 ];
