@@ -8,7 +8,6 @@ This site was crafted with passion using **React**, showcasing my projects, skil
 
 ## 🌐 Live Preview: 🔗 [Visit My Portfolio](https://mkjerry.netlify.app/)  
 
----
 
 ## ✨ Features
 
