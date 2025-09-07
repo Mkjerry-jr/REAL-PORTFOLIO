@@ -4,6 +4,8 @@ Welcome to my personal developer portfolio! 🚀
 This site was crafted with passion using **React**, showcasing my projects, skills, and journey as a Frontend Developer.
 
 ## 🌐 Live Preview
+![Demo GIF](Portfolio_demo.gif)
+
 
 🔗 [Visit My Portfolio](https://mkjerry.netlify.app/)  
 
