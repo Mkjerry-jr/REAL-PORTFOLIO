@@ -6,8 +6,7 @@ This site was crafted with passion using **React**, showcasing my projects, skil
 ## 🎥 Demo Video [May not be the exact same in future updates] 
 ![Demo GIF](Portfolio_demo.gif)
 
-## 🌐 Live Preview
-🔗 [Visit My Portfolio](https://mkjerry.netlify.app/)  
+## 🌐 Live Preview: 🔗 [Visit My Portfolio](https://mkjerry.netlify.app/)  
 
 ---
 
