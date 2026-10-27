@@ -28,7 +28,7 @@ import {
 } from '../assets';
 
 // Company logos
-import tcs from "../assets/company/tcs.png";
+import tcs from "../assets/company/self.png";
 import EduVision from "../assets/company/EduVision.png";
 import chatbot from "../assets/company/chatbot.png";
 import VHP from "../assets/company/VHP.png";
