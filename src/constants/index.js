@@ -74,13 +74,13 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Graduate Trainee (Not Onboarded Yet)",
-    company_name: "Tata Consultancy Services",
+    title: "Freelance",
+    company_name: "Self-Employed",
     icon: tcs,
     iconBg: "#383E56",
     date: "Jun 2025 - present",
     points: [
-      "Recently received Offer letter from TCS and waiting for Onboarding, it usually takes minimum 6 months to 1 year for Onboarding. So until that period of time I am unemployed!!!",
+      "Built premium, responsive websites for business clients, managing the full process from initial requirements through final deployment. Delivered mobile-friendly designs tailored to each client'sbrand and business goals, while independently handling client communication and revisions to complete projects on schedule.",
     ],
   },
 ];
